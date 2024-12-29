@@ -19,9 +19,9 @@ importers:
       '@remix-run/serve':
         specifier: ^2.15.2
         version: 2.15.2(typescript@5.7.2)
-      dotenv:
-        specifier: ^16.4.7
-        version: 16.4.7
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
       isbot:
         specifier: ^4.1.0
         version: 4.4.0
@@ -31,6 +31,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
     devDependencies:
       '@remix-run/dev':
         specifier: ^2.15.2
@@ -50,6 +53,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.20(postcss@8.4.49)
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       eslint:
         specifier: ^8.38.0
         version: 8.57.1
@@ -81,7 +87,7 @@ importers:
         specifier: ^5.1.0
         version: 5.4.11(@types/node@22.10.2)
       vite-tsconfig-paths:
-        specifier: ^4.3.2
+        specifier: ^4.2.1
         version: 4.3.2(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.2))
 
   packages/ui:
@@ -1232,6 +1238,11 @@ packages:
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+
+  cross-env@7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -4702,6 +4713,10 @@ snapshots:
   cookie@0.7.1: {}
 
   core-util-is@1.0.3: {}
+
+  cross-env@7.0.3:
+    dependencies:
+      cross-spawn: 7.0.6
 
   cross-spawn@7.0.6:
     dependencies:

@@ -1,10 +1,6 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-// * load the .env file
-import dotenv from "dotenv";
-dotenv.config({ path: "./.env" });
-
 declare module "@remix-run/node" {
   interface Future {
     v3_singleFetch: true;
@@ -25,6 +21,9 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   server: {
-    port: parseInt(process.env.PORT ?? "3000"),
+    port: 3001,
+  },
+  preview: {
+    port: 3002,
   },
 });
